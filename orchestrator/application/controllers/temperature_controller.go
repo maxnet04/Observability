@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/maxnet04/Observability/application/controllers/response"
-	"github.com/maxnet04/Observability/application/usecases"
+	"github.com/maxnet04/Observability/orchestrator/application/controllers/response"
+	"github.com/maxnet04/Observability/orchestrator/application/usecases"
 	tracer "go.opentelemetry.io/otel/trace"
 )
 

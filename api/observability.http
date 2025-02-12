@@ -1,0 +1,7 @@
+curl --request POST \
+--url http://localhost:8080/ \
+--header 'Content-Type: application/json' \
+--header 'User-Agent: insomnia/10.0.0' \
+--data '{
+  "cep": "36205060"
+}'

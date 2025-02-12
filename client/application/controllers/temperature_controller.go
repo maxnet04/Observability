@@ -5,9 +5,9 @@ import (
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/maxnet04/Observability/application/controllers/request"
-	"github.com/maxnet04/Observability/application/controllers/response"
-	"github.com/maxnet04/Observability/application/usecases"
+	"github.com/maxnet04/Observability/client/application/controllers/request"
+	"github.com/maxnet04/Observability/client/application/controllers/response"
+	"github.com/maxnet04/Observability/client/application/usecases"
 	tracer "go.opentelemetry.io/otel/trace"
 )
 
@@ -28,9 +28,6 @@ func (c *TemperatureController) PostTemperature(ctx *fiber.Ctx) error {
 
 	context, spanInicial := c.otelTracer.Start(ctx.Context(), "Controller-PostTemperature-Span")
 	defer spanInicial.End()
-
-	// _, span := c.otelTracer.Start(context, "Teste-Span")
-	// defer span.End()
 
 	var request = request.TemperatureRequest{}
 	err := ctx.BodyParser(&request)

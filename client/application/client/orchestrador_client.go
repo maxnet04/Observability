@@ -9,8 +9,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/maxnet04/Observability/application/client/response"
-	"github.com/maxnet04/Observability/application/model"
+	"github.com/maxnet04/Observability/client/application/client/response"
+	"github.com/maxnet04/Observability/client/application/model"
+
 	tracer "go.opentelemetry.io/otel/trace"
 )
 

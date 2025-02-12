@@ -1,17 +1,26 @@
-# Temperatura por CEP - Tracing entre microservices
-Sistema retorna clima atual baseado em um CEP informado
-
-Desafio Pós Go Expert - 2024 Labs -> Consulta Temperatura baseado em um CEP informado - FullCycle
+# Temperatura por CEP - Observabilidade e Monitoramento
+Sistema  identifica a cidade e retorna o clima atual (temperatura em graus celsius, fahrenheit e kelvin) juntamente com a cidade. Esse sistema  implementa  OTEL(Open Telemetry) e Zipkin.
 
 ### Como Utilizar localmente:
 #### Requisitos:
     - Certifique-se de ter o Go instalado em sua máquina.
     - Certifique-se de ter o Docker instalado em sua máquina.
-    - Foi atulizado a API viaCEP para encontrar a localização que deseja consultar a temperatura: https://viacep.com.br/
-    - Foi utilizado a API WeatherAPI para consultar as temperaturas desejadas: https://www.weatherapi.com/
+    
+- [GO](https://golang.org/doc/insttall) 1.17 ou superior
+- [Docker](https://docs.docker.com/get-docker/)
+
+
+### Variaáveis dde Ambiente
+
+Certifiquese de informar a API KEY da plataforma de consulta de temperatura no arquivo config.env na raiz do projeto
+
+ WEATHER_API_KEY=ZZZZZZZZZZZZZZ
+
+Como Rodar localmente
 
   1. Clonar o Repositório:~
   ```git clone https://github.com/maxnet04/observability.git```
+
 
   2. Acesse a pasta do app:
   ```cd observability```
@@ -19,22 +28,21 @@ Desafio Pós Go Expert - 2024 Labs -> Consulta Temperatura baseado em um CEP inf
   3. Para rodar :
   ```docker compose up -d ```
 
+  4. o serviço estará disponivel em http://localhost:8080.
 
-    Observação: Necessario informar a API KEY da plataforma de consulta de temperatura no arquivo config.env na raiz do projeto conforma abaixo:
-    WEATHER_API_KEY=XXXXXXXXXXXXXXXXXXXXX
 
 ### Como testar localmente:
 Porta: HTTP server on port :8080
 
-#### Execute o curl abaixo ou use um aplicação client REST para realizar a requisição:
+#### Execute o curl abaixo:
 
     curl --request POST \
     --url http://localhost:8080/ \
     --header 'Content-Type: application/json' \
     --header 'User-Agent: insomnia/10.0.0' \
     --data '{
-      "cep": "36205060"
+      "cep": {cep}
     }'
 
 
-###### Observação: Informar o CEP numerico 8 caracteres como "body"
+###### Substitua pelo cep que deseja testar

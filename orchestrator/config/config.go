@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/maxnet04/Observability/application/client"
-	"github.com/maxnet04/Observability/application/controllers"
-	"github.com/maxnet04/Observability/application/usecases"
+	"github.com/maxnet04/Observability/orchestrator/application/client"
+	"github.com/maxnet04/Observability/orchestrator/application/controllers"
+	"github.com/maxnet04/Observability/orchestrator/application/usecases"
 	"github.com/spf13/viper"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"

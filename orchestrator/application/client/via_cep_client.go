@@ -7,7 +7,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/maxnet04/Observability/application/client/response"
+	"github.com/maxnet04/Observability/orchestrator/application/client/response"
 	tracer "go.opentelemetry.io/otel/trace"
 )
 
