@@ -11,19 +11,14 @@ Desafio Pós Go Expert - 2024 Labs -> Consulta Temperatura baseado em um CEP inf
     - Foi utilizado a API WeatherAPI para consultar as temperaturas desejadas: https://www.weatherapi.com/
 
   1. Clonar o Repositório:~
-  ```git clone https://github.com/murilocarbol/observability-and-telemetry.git```
+  ```git clone https://github.com/maxnet04/observability.git```
 
   2. Acesse a pasta do app:
-  ```cd observability-and-telemetry```
+  ```cd observability```
 
-  3. Rode o docker para buildar a imagem gerando o container:
-  ```docker build -t nome_que_preferir/observability-and-telemetry:latest .```
+  3. Para rodar :
+  ```docker compose up -d ```
 
-  4. Rode o docker executar ocontainer:  
-  ```docker run --rm -p 8080:8080 nome_que_preferir/observability-and-telemetry```
-
-  5. Rode o main.go dentro da pasta cmd/:
-  ```go run cmd/main.go```
 
     Observação: Necessario informar a API KEY da plataforma de consulta de temperatura no arquivo config.env na raiz do projeto conforma abaixo:
     WEATHER_API_KEY=XXXXXXXXXXXXXXXXXXXXX
@@ -38,7 +33,7 @@ Porta: HTTP server on port :8080
     --header 'Content-Type: application/json' \
     --header 'User-Agent: insomnia/10.0.0' \
     --data '{
-      "cep": "13201005"
+      "cep": "36205060"
     }'
 
 
