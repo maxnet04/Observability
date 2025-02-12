@@ -1,6 +1,6 @@
 package main
 
-import "github.com/maxnet04/Observability/config"
+import "github.com/maxnet04/Observability/orchestrator/config"
 
 func main() {
 
